@@ -10,6 +10,9 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
 
+    
+    var emojis = ["☺️", "🙈", "📅"] //Array con emojis
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +26,9 @@ class EmojiTableViewController: UITableViewController {
     
     //Numero de filas que queremos que tenga la tabla
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         //El return debe devolver un numero que sera el numero de filas
-        return 10
+        return emojis.count //Devolvermos el numero de "cosas" que tenga nuestro array
     }
 
     
@@ -34,9 +38,13 @@ class EmojiTableViewController: UITableViewController {
         //withIdentifier debe usar el id que le pongas a la celda (donde el icono de periodico)
         
         //Aqui debemos "rellenar" la celda
-        cell.textLabel?.text = "Hola Mundo"
+        cell.textLabel?.text = emojis[indexPath.row] //indexPath nos indica el indice de cada fila
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segue", sender: nil)
     }
 
 }

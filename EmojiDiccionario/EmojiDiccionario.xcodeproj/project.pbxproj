@@ -97,8 +97,8 @@
 		ECE069FB1FA2519900EA33F5 /* EmojiDiccionario */ = {
 			isa = PBXGroup;
 			children = (
-				ECE06A2A1FA39E8500EA33F5 /* EmojiTableViewController.swift */,
 				ECE069FC1FA2519900EA33F5 /* AppDelegate.swift */,
+				ECE06A2A1FA39E8500EA33F5 /* EmojiTableViewController.swift */,
 				ECE06A001FA2519900EA33F5 /* Main.storyboard */,
 				ECE06A031FA2519900EA33F5 /* Assets.xcassets */,
 				ECE06A051FA2519900EA33F5 /* LaunchScreen.storyboard */,
