@@ -44,7 +44,20 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segue", sender: nil)
+        
+        //Le pasamos el emoji selecionado la columna de emojis(array de emoji)
+        let emojiSelecionado = emojis[indexPath.row]
+        
+        //se lo pasamos en el sender que ira al prepare for segue.
+        performSegue(withIdentifier: "segue", sender: emojiSelecionado)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //Con esto "hacemos" visible el otro viewControler, y podemos acceder a sus variables y demas.
+        let emojiDefVC = segue.destination as! EmojiDefinitionViewController
+        
+        emojiDefVC.emoji = sender as! String //se fuerza a ser un string
     }
 
 }
