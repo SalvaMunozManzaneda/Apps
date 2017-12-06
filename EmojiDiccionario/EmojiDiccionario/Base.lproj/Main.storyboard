@@ -58,25 +58,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un coche de F1 con patrocinador Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5r-Lt-U0X">
-                                <rect key="frame" x="15" y="631" width="345" height="21"/>
+                                <rect key="frame" x="15" y="631.5" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año: 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlM-te-oY8">
+                                <rect key="frame" x="149" y="603" width="77.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tl6-zo-1TI">
+                                <rect key="frame" x="117" y="573" width="141.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria: Coches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFp-8t-NQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n7F-GV-I2I" firstAttribute="centerX" secondItem="qQP-dV-fuW" secondAttribute="centerX" id="5KD-zn-1LB"/>
                             <constraint firstItem="f5r-Lt-U0X" firstAttribute="leading" secondItem="H5J-41-ri7" secondAttribute="leading" constant="15" id="82L-kE-elf"/>
                             <constraint firstItem="H5J-41-ri7" firstAttribute="bottom" secondItem="f5r-Lt-U0X" secondAttribute="bottom" constant="15" id="8ax-x6-TqI"/>
+                            <constraint firstItem="rlM-te-oY8" firstAttribute="centerX" secondItem="qQP-dV-fuW" secondAttribute="centerX" id="Cxa-IU-9hI"/>
+                            <constraint firstItem="rlM-te-oY8" firstAttribute="top" secondItem="VFp-8t-NQc" secondAttribute="bottom" constant="9.5" id="Sep-c8-Lc1"/>
                             <constraint firstItem="n7F-GV-I2I" firstAttribute="top" secondItem="H5J-41-ri7" secondAttribute="top" constant="20" id="cJ2-P4-1h3"/>
+                            <constraint firstItem="f5r-Lt-U0X" firstAttribute="top" secondItem="rlM-te-oY8" secondAttribute="bottom" constant="8" id="mFB-Uj-tyL"/>
                             <constraint firstItem="H5J-41-ri7" firstAttribute="trailing" secondItem="f5r-Lt-U0X" secondAttribute="trailing" constant="15" id="rtI-BT-MTQ"/>
+                            <constraint firstItem="Tl6-zo-1TI" firstAttribute="centerX" secondItem="qQP-dV-fuW" secondAttribute="centerX" id="ufW-rC-69j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H5J-41-ri7"/>
                     </view>
                     <connections>
                         <outlet property="EmojiLabel" destination="n7F-GV-I2I" id="8K7-V8-hpl"/>
                         <outlet property="emojiDefLabel" destination="f5r-Lt-U0X" id="eGj-mI-rLL"/>
+                        <outlet property="textoAnio" destination="rlM-te-oY8" id="lca-di-sTc"/>
+                        <outlet property="textoCategoria" destination="VFp-8t-NQc" id="5oW-cp-l7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9K-hG-T53" userLabel="First Responder" sceneMemberID="firstResponder"/>

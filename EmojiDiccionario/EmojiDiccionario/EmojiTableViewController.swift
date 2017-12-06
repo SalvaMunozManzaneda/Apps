@@ -10,17 +10,16 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
 
-    
-    var emojis = ["☺️", "🙈", "📅"] //Array con emojis
+    // : [Emoji] significa que va a ser un array de Emoji()
+    // al igual qeu cuando haces let nombre:String es string
+    // inicializado en un array vacio
+    var emojis : [Emoji]  = []    // = ["☺️", "🙈", "📅"] //Array con emojis
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //inicializamos los emojis con la funcion que nos pasa un array de emojis
+       emojis = createEmoji()
     }
 
     
@@ -38,7 +37,7 @@ class EmojiTableViewController: UITableViewController {
         //withIdentifier debe usar el id que le pongas a la celda (donde el icono de periodico)
         
         //Aqui debemos "rellenar" la celda
-        cell.textLabel?.text = emojis[indexPath.row] //indexPath nos indica el indice de cada fila
+        cell.textLabel?.text = emojis[indexPath.row].theEmoji //indexPath nos indica el indice de cada fila
 
         return cell
     }
@@ -58,6 +57,25 @@ class EmojiTableViewController: UITableViewController {
         let emojiDefVC = segue.destination as! EmojiDefinitionViewController
         
         emojiDefVC.emoji = sender as! String //se fuerza a ser un string
+    }
+    
+    //Funcion para crear un array de emojis
+    func createEmoji() -> [Emoji] {
+        
+        let smiley = Emoji()
+        smiley.theEmoji = "☺️"
+        smiley.def = "Una carita sonriente"
+        smiley.birthYear = 2010
+        smiley.category = "face"
+        
+        let monkey = Emoji()
+        monkey.theEmoji = "🙈"
+        monkey.birthYear = 2011
+        monkey.def = "Un mono avergonzado"
+        monkey.category = "face"
+        
+        //devolvemos un array de objetos Emoji()
+        return [smiley, monkey]
     }
 
 }

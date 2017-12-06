@@ -10,6 +10,8 @@ import UIKit
 
 class EmojiDefinitionViewController: UIViewController {
 
+    @IBOutlet weak var textoCategoria: UILabel!
+    @IBOutlet weak var textoAnio: UILabel!
     @IBOutlet weak var emojiDefLabel: UILabel!
     @IBOutlet weak var EmojiLabel: UILabel!
     var emoji = "" //este contenido viene desde emojiTVC
