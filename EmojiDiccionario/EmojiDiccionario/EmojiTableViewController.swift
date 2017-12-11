@@ -56,7 +56,7 @@ class EmojiTableViewController: UITableViewController {
         //Con esto "hacemos" visible el otro viewControler, y podemos acceder a sus variables y demas.
         let emojiDefVC = segue.destination as! EmojiDefinitionViewController
         
-        emojiDefVC.emoji = sender as! String //se fuerza a ser un string
+        emojiDefVC.emoji = sender as! Emoji //se fuerza a ser un *string* un objeto
     }
     
     //Funcion para crear un array de emojis
