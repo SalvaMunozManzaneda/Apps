@@ -14,6 +14,7 @@
 		EC53C0141FDF25FC00715C83 /* ToDo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC53C0121FDF25FC00715C83 /* ToDo_List.xcdatamodeld */; };
 		EC53C0161FDF25FC00715C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC53C0151FDF25FC00715C83 /* Assets.xcassets */; };
 		EC53C0191FDF25FC00715C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC53C0171FDF25FC00715C83 /* LaunchScreen.storyboard */; };
+		ECD295311FE3076700232818 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD295301FE3076700232818 /* AddToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EC53C0151FDF25FC00715C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC53C0181FDF25FC00715C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC53C01A1FDF25FC00715C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD295301FE3076700232818 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				EC53C00B1FDF25FB00715C83 /* AppDelegate.swift */,
 				EC039E641FE1350A004AC703 /* ToDoTableViewController.swift */,
 				EC039E661FE135F5004AC703 /* ToDo.swift */,
+				ECD295301FE3076700232818 /* AddToDoViewController.swift */,
 				EC53C00F1FDF25FB00715C83 /* Main.storyboard */,
 				EC53C0151FDF25FC00715C83 /* Assets.xcassets */,
 				EC53C0171FDF25FC00715C83 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				EC53C00C1FDF25FB00715C83 /* AppDelegate.swift in Sources */,
 				EC039E651FE1350A004AC703 /* ToDoTableViewController.swift in Sources */,
+				ECD295311FE3076700232818 /* AddToDoViewController.swift in Sources */,
 				EC53C0141FDF25FC00715C83 /* ToDo_List.xcdatamodeld in Sources */,
 				EC039E671FE135F5004AC703 /* ToDo.swift in Sources */,
 			);
