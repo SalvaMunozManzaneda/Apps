@@ -1,6 +1,6 @@
 //
-//  Emoji_DiccionarioUITests.swift
-//  Emoji DiccionarioUITests
+//  EmojiDiccionarioUITests.swift
+//  EmojiDiccionarioUITests
 //
 //  Created by Salva Muñoz on 26/10/17.
 //  Copyright © 2017 Salva Muñoz. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Emoji_DiccionarioUITests: XCTestCase {
+class EmojiDiccionarioUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

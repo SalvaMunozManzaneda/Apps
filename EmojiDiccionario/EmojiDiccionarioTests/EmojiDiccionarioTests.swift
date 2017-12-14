@@ -1,15 +1,15 @@
 //
-//  Emoji_DiccionarioTests.swift
-//  Emoji DiccionarioTests
+//  EmojiDiccionarioTests.swift
+//  EmojiDiccionarioTests
 //
 //  Created by Salva Muñoz on 26/10/17.
 //  Copyright © 2017 Salva Muñoz. All rights reserved.
 //
 
 import XCTest
-@testable import Emoji_Diccionario
+@testable import EmojiDiccionario
 
-class Emoji_DiccionarioTests: XCTestCase {
+class EmojiDiccionarioTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
