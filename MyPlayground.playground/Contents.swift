@@ -56,5 +56,30 @@ func sacarPantallaPersona (persona : Persona){
 }
 sacarPantallaPersona(persona : persona1)
 
+//Optional
+
+//se usa para poder dejar una variable a nulo, y tiene que llevar de que tipo es. (int string double bool..)
+var age : Int? = nil
+
+//puedes pasar un string a int
+var stringAge = "26"
+
+var ageInt = Int(stringAge) //aqui lo envuelves como un int que era string "wrapping"
+print(ageInt)//esto es un opcional, si le pasas un numero funciona, si le pasas al string una palabra le guarda un nil.
+print(ageInt!)//el simbolo de exclamacion sirve para quitarle el opcional y dejarlo como variable normal (int string...) "unwrapping"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
