@@ -8,10 +8,12 @@
 
 import UIKit
 
-var toDos : [ToDo] = []
+
 
 class ToDoTableViewController: UITableViewController {
 
+    var toDos : [ToDo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +46,7 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        let toDo = toDos[indexPath.row] //aqui recogemos uno a uno los toDos, recoge solo un objeto por "vuelta"
+        let toDo = toDos[indexPath.row] //recogemos uno a uno los toDos, recoge solo un objeto por "vuelta"
 
         if toDo.important {
             cell.textLabel?.text = "❗️" + toDo.name
@@ -53,6 +55,11 @@ class ToDoTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let addToDoVC = segue.destination as! AddToDoViewController //para conectar ToDoTableVC con AddToDoVC y enviar los datos
+        addToDoVC.previusVC = self //pasamos toda la clase en la que estamos a AddToDoVC
     }
 
 }
