@@ -9,12 +9,17 @@
 import UIKit
 
 class CompletadoViewController: UIViewController {
+    
+    var previusVC = ToDoTableViewController()
+    var selectedToDo = ToDo()
+    
     @IBOutlet weak var titleText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleText.text = selectedToDo.name
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func completadoTapped(_ sender: Any) {

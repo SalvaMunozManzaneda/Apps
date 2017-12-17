@@ -63,8 +63,16 @@ class ToDoTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let addToDoVC = segue.destination as! AddToDoViewController //para conectar ToDoTableVC con AddToDoVC y enviar los datos
-        addToDoVC.previusVC = self //pasamos toda la clase en la que estamos a AddToDoVC
+        //para conectar ToDoTableVC con AddToDoVC y enviar los datos
+        if let addToDoVC = segue.destination as? AddToDoViewController{
+            addToDoVC.previusVC = self //pasamos toda la clase en la que estamos a AddToDoVC
+        }
+        if let completeVC = segue.destination as? CompletadoViewController{//nos aseguramos que va hacia completadoViewController
+            
+            if let toDo = sender as? ToDo{//aseguramos que pasamos un ToDo()
+                completeVC.selectedToDo = toDo
+            }
+        }
     }
 
 }
