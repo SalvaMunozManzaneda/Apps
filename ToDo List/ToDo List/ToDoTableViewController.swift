@@ -57,6 +57,11 @@ class ToDoTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let toDo = toDos[indexPath.row] //recogemos la fila selecionada, y le pasamos a toDo el objeto de toDos
+        performSegue(withIdentifier: "moveToComplete", sender: toDo) //pasamos por el segue "moveToComplete" el toDo selecionado.
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let addToDoVC = segue.destination as! AddToDoViewController //para conectar ToDoTableVC con AddToDoVC y enviar los datos
         addToDoVC.previusVC = self //pasamos toda la clase en la que estamos a AddToDoVC

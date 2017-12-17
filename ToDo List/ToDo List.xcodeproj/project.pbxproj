@@ -15,6 +15,7 @@
 		EC53C0161FDF25FC00715C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC53C0151FDF25FC00715C83 /* Assets.xcassets */; };
 		EC53C0191FDF25FC00715C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC53C0171FDF25FC00715C83 /* LaunchScreen.storyboard */; };
 		ECD295311FE3076700232818 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD295301FE3076700232818 /* AddToDoViewController.swift */; };
+		ECF830E71FE68EC60002CF26 /* CompletadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF830E61FE68EC60002CF26 /* CompletadoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EC53C0181FDF25FC00715C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC53C01A1FDF25FC00715C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD295301FE3076700232818 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		ECF830E61FE68EC60002CF26 /* CompletadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletadoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				EC53C00B1FDF25FB00715C83 /* AppDelegate.swift */,
 				EC039E641FE1350A004AC703 /* ToDoTableViewController.swift */,
-				EC039E661FE135F5004AC703 /* ToDo.swift */,
 				ECD295301FE3076700232818 /* AddToDoViewController.swift */,
+				ECF830E61FE68EC60002CF26 /* CompletadoViewController.swift */,
+				EC039E661FE135F5004AC703 /* ToDo.swift */,
 				EC53C00F1FDF25FB00715C83 /* Main.storyboard */,
 				EC53C0151FDF25FC00715C83 /* Assets.xcassets */,
 				EC53C0171FDF25FC00715C83 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				EC039E651FE1350A004AC703 /* ToDoTableViewController.swift in Sources */,
 				ECD295311FE3076700232818 /* AddToDoViewController.swift in Sources */,
 				EC53C0141FDF25FC00715C83 /* ToDo_List.xcdatamodeld in Sources */,
+				ECF830E71FE68EC60002CF26 /* CompletadoViewController.swift in Sources */,
 				EC039E671FE135F5004AC703 /* ToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
