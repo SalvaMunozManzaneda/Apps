@@ -23,5 +23,17 @@ class CompletadoViewController: UIViewController {
     }
 
     @IBAction func completadoTapped(_ sender: Any) {
+        var index = 0
+        for toDo in previusVC.toDos {
+            
+            if toDo.name == selectedToDo.name{
+                
+                previusVC.toDos.remove(at: index)
+                previusVC.tableView.reloadData()
+                navigationController?.popViewController(animated: true)
+                break
+            }
+            index += 1
+        }
     }
 }

@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ToDoTableViewController: UITableViewController {
 
     var toDos : [ToDo] = []
@@ -67,10 +65,11 @@ class ToDoTableViewController: UITableViewController {
         if let addToDoVC = segue.destination as? AddToDoViewController{
             addToDoVC.previusVC = self //pasamos toda la clase en la que estamos a AddToDoVC
         }
+        
         if let completeVC = segue.destination as? CompletadoViewController{//nos aseguramos que va hacia completadoViewController
-            
             if let toDo = sender as? ToDo{//aseguramos que pasamos un ToDo()
                 completeVC.selectedToDo = toDo
+                completeVC.previusVC = self
             }
         }
     }
