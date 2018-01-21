@@ -11,29 +11,38 @@ import UIKit
 class CompletadoViewController: UIViewController {
     
     var previusVC = ToDoTableViewController()
-    var selectedToDo = ToDo()
+    var selectedToDo : ToDoCoreData? = nil //por defecto es = nil
     
     @IBOutlet weak var titleText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleText.text = selectedToDo.name
-
+        titleText.text = selectedToDo?.name
     }
-
+    
     @IBAction func completadoTapped(_ sender: Any) {
-        var index = 0
-        for toDo in previusVC.toDos {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             
-            if toDo.name == selectedToDo.name{
-                
-                previusVC.toDos.remove(at: index)
-                previusVC.tableView.reloadData()
+            if let theToDo = selectedToDo{
+                context.delete(theToDo)
                 navigationController?.popViewController(animated: true)
-                break
             }
-            index += 1
         }
+        
+        
+        /*
+         var index = 0
+         for toDo in previusVC.toDos {
+         
+         if toDo.name == selectedToDo.name{
+         
+         previusVC.toDos.remove(at: index)
+         previusVC.tableView.reloadData()
+         navigationController?.popViewController(animated: true)
+         break
+         }
+         index += 1
+         }*/
     }
 }

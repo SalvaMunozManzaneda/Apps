@@ -9,14 +9,33 @@
 import UIKit
 
 class ToDoTableViewController: UITableViewController {
-
-    var toDos : [ToDo] = []
+    
+    var toDos : [ToDoCoreData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toDos = toDo()
-
+        //getToDos()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getToDos()//para que refresque la pantalla de inicio cada vez que guardas algo en el CoreData
+    }
+    
+    func getToDos() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            //ToDoCoreData.fetchRequest() significa como ve y coge todo los datos del coredata
+            if let coreDataToDos = try? context.fetch(ToDoCoreData.fetchRequest()) as? [ToDoCoreData]//despues del as? tienes que indicar que quieres que devuelva, un array de ToDo en nuestro caso.
+            {
+                if let theToDos = coreDataToDos{//para que coreDataToDos no sean un opcional (unwrapping)
+                    toDos = theToDos
+                    tableView.reloadData()
+                }
+                
+            }
+        }
     }
     
     func toDo() -> [ToDo] {
@@ -33,25 +52,28 @@ class ToDoTableViewController: UITableViewController {
         
         return [eggs, cheese, dog]
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return toDos.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         let toDo = toDos[indexPath.row] //recogemos uno a uno los toDos, recoge solo un objeto por "vuelta"
-
-        if toDo.important {
-            cell.textLabel?.text = "❗️" + toDo.name
-        }else{
-            cell.textLabel?.text = toDo.name
+        
+        if let name = toDo.name{
+            
+            if toDo.important {
+                cell.textLabel?.text = "❗️" + name
+            }else{
+                cell.textLabel?.text = toDo.name
+            }
         }
-
+        
         return cell
     }
     
@@ -67,11 +89,11 @@ class ToDoTableViewController: UITableViewController {
         }
         
         if let completeVC = segue.destination as? CompletadoViewController{//nos aseguramos que va hacia completadoViewController
-            if let toDo = sender as? ToDo{//aseguramos que pasamos un ToDo()
+            if let toDo = sender as? ToDoCoreData{//aseguramos que pasamos un ToDo()
                 completeVC.selectedToDo = toDo
                 completeVC.previusVC = self
             }
         }
     }
-
+    
 }
